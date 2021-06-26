@@ -13,7 +13,7 @@ const AddBlog = () => {
             content: data.content,
             img: imageUrl
         };
-        const url = `http://localhost:5000/addBlog`;
+        const url = `https://cryptic-brushlands-65698.herokuapp.com/addBlog`;
 
         fetch(url, {
             method: 'POST',

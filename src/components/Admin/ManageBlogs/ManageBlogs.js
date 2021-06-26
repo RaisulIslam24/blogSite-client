@@ -7,13 +7,13 @@ const ManageBlogs = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/Blogs')
+        fetch('https://cryptic-brushlands-65698.herokuapp.com/Blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
 
     const deleteBlog = id => {
-        fetch(`http://localhost:5000/deleteBlog/${id}`, {
+        fetch(`https://cryptic-brushlands-65698.herokuapp.com/deleteBlog/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
